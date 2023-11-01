@@ -5,13 +5,21 @@ namespace FizzBuzzTest
 {
     public class FizzBuzzGameTest
     {
+        private readonly FizzBuzzGame game;
+        public FizzBuzzGameTest()
+        {
+            game = new FizzBuzzGame();
+        }
+
         [Fact]
         public void Should_return_Fizz_when_CountOff_given_3()
         {
-            FizzBuzzGame game = new FizzBuzzGame();
-
+            //given
+            int number = 3;
+            //when
+            string res = game.CountOff(number);
             //then
-            Assert.NotNull(game);
+            Assert.Equal("Fizz", res);
         }
 
         [Fact]
